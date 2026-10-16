@@ -27,3 +27,8 @@ CVE-2026-78408
 CVE-2026-78409
 CVE-2026-78410
 CVE-2026-16742
+
+# urllib3 2.7.0 bundled inside pip 26.2.1 (pip/_vendor), pulled in by guardrails-ai's pip>=26.1.2.
+# Only pip uses it, at build time; the app's own urllib3 is 2.8.0. No pip release bundles the fix yet.
+CVE-2026-97687
+CVE-2026-97689
