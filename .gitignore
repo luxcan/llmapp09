@@ -1,0 +1,16 @@
+# Python virtual environments and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local settings and secrets
+.env
+.env.local
+
+# deepeval run records
+.deepeval/
+
+# Node
+node_modules/
