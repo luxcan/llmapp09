@@ -100,14 +100,19 @@ class AIService:
             "emotions must include at least one emotion representing each distinct "
             "sentiment present in the text — for mixed text, include emotions for "
             "both the positive elements (e.g. admiration, satisfaction) and the "
-            "negative elements (e.g. disappointment, frustration), not just one side.\n\n"
+            "negative elements (e.g. disappointment, frustration), not just one side. "
+            "Neutral text that expresses no emotion (for example scheduling details or "
+            "plain facts) must have an empty emotions list []; do not invent emotions "
+            "such as indifference or calmness.\n\n"
             "Examples:\n"
             'Negative text -> {"overallSentiment": "negative", "sentimentScore": -0.8, '
             '"emotions": ["anger", "disappointment"], "confidence": 0.9}\n'
             'Positive text -> {"overallSentiment": "positive", "sentimentScore": 0.8, '
             '"emotions": ["joy", "excitement"], "confidence": 0.9}\n'
             'Mixed text -> {"overallSentiment": "mixed", "sentimentScore": 0.1, '
-            '"emotions": ["admiration", "disappointment"], "confidence": 0.9}\n\n'
+            '"emotions": ["admiration", "disappointment"], "confidence": 0.9}\n'
+            'Neutral text -> {"overallSentiment": "neutral", "sentimentScore": 0.0, '
+            '"emotions": [], "confidence": 0.9}\n\n'
             "Return JSON in this exact format:\n"
             '{"overallSentiment": "positive|negative|neutral|mixed", "sentimentScore": 0.0, '
             '"emotions": ["emotion1", "emotion2"], "confidence": 0.9}'
